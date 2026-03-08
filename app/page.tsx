@@ -261,30 +261,6 @@ export default function Page() {
           </div>
         </section>
 
-        {/* Cámara - Centro Democrático */}
-        <section>
-          <FadeIn delay={0.2}>
-            <div className="flex items-center gap-2 mb-4">
-              <div className="w-1 h-6 bg-red-600 rounded-full"></div>
-              <h2 className="text-lg font-bold text-gray-900">Cámara por Bogotá — Centro Democrático</h2>
-            </div>
-            <div className="rounded-2xl border-2 border-red-200 bg-red-50 p-4 mb-4">
-              <p className="text-xs font-semibold uppercase tracking-widest text-gray-500 mb-1">Así se vota</p>
-              <p className="font-bold text-gray-900 text-lg mb-3">Centro Democrático · Cámara Bogotá</p>
-              <span className="bg-white border border-gray-200 rounded-xl px-4 py-2 font-bold text-gray-800 text-base shadow-sm">
-                Candidato: <span className="text-red-600">101</span>
-              </span>
-            </div>
-          </FadeIn>
-          <div className="space-y-3">
-            {camaraCandidatos.map((c) => (
-              <ScrollCard key={c.numero}>
-                <CandidatoCard {...c} color="bg-red-600" />
-              </ScrollCard>
-            ))}
-          </div>
-        </section>
-
         {/* Partido Verde */}
         <section>
           <FadeIn delay={0.2}>
@@ -305,6 +281,30 @@ export default function Page() {
             {verdeCandidatos.map((c) => (
               <ScrollCard key={c.numero}>
                 <CandidatoCard {...c} color="bg-green-600" />
+              </ScrollCard>
+            ))}
+          </div>
+        </section>
+
+        {/* Cámara - Centro Democrático */}
+        <section>
+          <FadeIn delay={0.25}>
+            <div className="flex items-center gap-2 mb-4">
+              <div className="w-1 h-6 bg-yellow-500 rounded-full"></div>
+              <h2 className="text-lg font-bold text-gray-900">Cámara por Bogotá — Centro Democrático</h2>
+            </div>
+            <div className="rounded-2xl border-2 border-yellow-200 bg-yellow-50 p-4 mb-4">
+              <p className="text-xs font-semibold uppercase tracking-widest text-gray-500 mb-1">Así se vota</p>
+              <p className="font-bold text-gray-900 text-lg mb-3">Centro Democrático · Cámara Bogotá</p>
+              <span className="bg-white border border-gray-200 rounded-xl px-4 py-2 font-bold text-gray-800 text-base shadow-sm">
+                Candidato: <span className="text-yellow-600">101</span>
+              </span>
+            </div>
+          </FadeIn>
+          <div className="space-y-3">
+            {camaraCandidatos.map((c) => (
+              <ScrollCard key={c.numero}>
+                <CandidatoCard {...c} color="bg-yellow-500" />
               </ScrollCard>
             ))}
           </div>
