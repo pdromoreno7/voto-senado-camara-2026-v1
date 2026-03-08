@@ -179,6 +179,11 @@ export default function Page() {
     <main className="min-h-screen bg-gray-50 font-sans">
       {/* Header */}
       <div className="bg-white border-b border-gray-100 px-4 py-6 text-center shadow-sm">
+        <img
+          src="/colombia-flag.jpg"
+          alt="Colombia"
+          className="w-16 h-10 object-cover rounded-lg mx-auto mb-3 shadow-sm"
+        />
         <p className="text-xs font-semibold uppercase tracking-widest text-gray-400 mb-1">Elecciones Colombia 2026</p>
         <h1 className="text-2xl font-bold text-gray-900 leading-tight">¿Por quién votar?</h1>
         <p className="text-sm text-gray-500 mt-1">Guía para votar al Senado · Hoy</p>
