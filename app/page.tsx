@@ -2,7 +2,23 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "¿Por quién votar? — Elecciones 2026",
-  description: "Guía rápida para votar en las elecciones al Congreso 2026",
+  description: "Guía rápida para votar en las elecciones al Congreso Colombia 2026",
+  icons: {
+    icon: "/colombia-flag.jpg",
+    apple: "/colombia-flag.jpg",
+  },
+  openGraph: {
+    title: "¿Por quién votar? — Elecciones Colombia 2026",
+    description: "Guía rápida para votar en las elecciones al Congreso 2026",
+    images: [{ url: "/colombia-flag.jpg", width: 800, height: 600 }],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "¿Por quién votar? — Elecciones Colombia 2026",
+    description: "Guía rápida para votar en las elecciones al Congreso 2026",
+    images: ["/colombia-flag.jpg"],
+  },
 };
 
 const salvacionCandidatos = [
