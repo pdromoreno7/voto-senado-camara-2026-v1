@@ -273,6 +273,9 @@ export default function Page() {
         <p className="text-center text-xs text-gray-400 pb-4">
           Información basada en listas oficiales · Elecciones Congreso Colombia 2026
         </p>
+        <p className="text-center text-xs text-gray-400 pb-6">
+          Hecho con ❤️ por <span className="font-semibold text-gray-600">Pedro Moreno</span>
+        </p>
       </div>
     </main>
   );
