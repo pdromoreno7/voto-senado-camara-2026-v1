@@ -55,6 +55,13 @@ const salvacionCandidatos = [
     descripcion: "Candidato al Senado por el Movimiento de Salvación Nacional.",
     region: "Nacional",
   },
+  {
+    numero: "100",
+    nombre: "Sara Castellanos",
+    cargo: "Senado",
+    descripcion: "Voto de lista por el Movimiento de Salvación Nacional.",
+    region: "Nacional",
+  },
 ];
 
 const verdeCandidatos = [
