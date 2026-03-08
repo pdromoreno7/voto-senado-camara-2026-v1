@@ -58,6 +58,7 @@ const salvacionCandidatos = [
     cargo: "Senado",
     descripcion: "Abogado de la Universidad del Tolima, especialista en Derechos Humanos y Competencias Ciudadanas. Su campo de investigación es la filosofía política libertaria. Influencer y activista digital con fuerte presencia en redes sociales.",
     region: "Nacional",
+    foto: "/john-bermeo.jpg",
   },
   {
     numero: "09",
