@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { FadeIn, StaggerList, StaggerItem, Pulsebadge } from "./components/AnimatedCard";
 
 export const metadata: Metadata = {
   title: "¿Por quién votar? — Elecciones 2026",
@@ -118,7 +119,7 @@ function CandidatoCard({
   foto?: string;
 }) {
   return (
-    <div className="bg-white rounded-2xl shadow-md border border-gray-100 p-4 flex items-start gap-4">
+    <div className="bg-white rounded-2xl shadow-md border border-gray-100 p-4 flex items-start gap-4 hover:shadow-lg transition-shadow duration-300">
       {foto ? (
         <img
           src={foto}
@@ -131,7 +132,7 @@ function CandidatoCard({
         </div>
       )}
       <div>
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-2 flex-wrap">
           <p className="font-semibold text-gray-900 text-base leading-tight">{nombre}</p>
           <span className={`text-xs text-white font-bold px-2 py-0.5 rounded-full ${color}`}>#{numero}</span>
         </div>
@@ -164,10 +165,7 @@ function TarjetonBox({
           Partido: <span className="text-blue-600">{numero}</span>
         </span>
         {candidatos.map((c) => (
-          <span
-            key={c}
-            className="bg-white border border-gray-200 rounded-xl px-4 py-2 font-bold text-gray-800 text-base shadow-sm"
-          >
+          <span key={c} className="bg-white border border-gray-200 rounded-xl px-4 py-2 font-bold text-gray-800 text-base shadow-sm">
             Candidato: <span className="text-blue-600">{c}</span>
           </span>
         ))}
@@ -180,103 +178,127 @@ export default function Page() {
   return (
     <main className="min-h-screen bg-gray-50 font-sans">
       {/* Header */}
-      <div className="bg-white border-b border-gray-100 px-4 py-6 text-center shadow-sm">
-        <img
-          src="/colombia-flag.jpg"
-          alt="Colombia"
-          className="w-16 h-10 object-cover rounded-lg mx-auto mb-3 shadow-sm"
-        />
-        <p className="text-xs font-semibold uppercase tracking-widest text-gray-400 mb-1">Elecciones Colombia 2026</p>
-        <h1 className="text-2xl font-bold text-gray-900 leading-tight">¿Por quién votar?</h1>
-        <p className="text-sm text-gray-500 mt-1">Guía para votar al Senado · Hoy</p>
-      </div>
+      <FadeIn>
+        <div className="bg-white border-b border-gray-100 px-4 py-6 text-center shadow-sm">
+          <img
+            src="/colombia-flag.jpg"
+            alt="Colombia"
+            className="w-16 h-10 object-cover rounded-lg mx-auto mb-3 shadow-sm"
+          />
+          <p className="text-xs font-semibold uppercase tracking-widest text-gray-400 mb-1">Elecciones Colombia 2026</p>
+          <h1 className="text-2xl font-bold text-gray-900 leading-tight">¿Por quién votar?</h1>
+          <p className="text-sm text-gray-500 mt-1">Guía para votar al Senado · Hoy</p>
+        </div>
+      </FadeIn>
 
       <div className="max-w-lg mx-auto px-4 py-6 space-y-8">
 
         {/* Nota importante */}
-        <div className="bg-amber-50 border border-amber-200 rounded-2xl p-4">
-          <p className="text-sm font-semibold text-amber-800 mb-2">💡 ¿No sabes exactamente por quién votar?</p>
-          <div className="bg-red-50 border border-red-200 rounded-xl p-3 mb-3">
-            <p className="text-sm font-bold text-red-700">⚠️ Solo puedes marcar UN número en el tarjetón.</p>
-            <p className="text-sm text-red-600 mt-0.5">Si marcas más de uno, tu voto queda nulo. Elige: el partido (100) o un candidato.</p>
+        <FadeIn delay={0.1}>
+          <div className="bg-amber-50 border border-amber-200 rounded-2xl p-4">
+            <p className="text-sm font-semibold text-amber-800 mb-2">💡 ¿No sabes exactamente por quién votar?</p>
+            <div className="bg-red-50 border border-red-200 rounded-xl p-3 mb-3">
+              <p className="text-sm font-bold text-red-700">⚠️ Solo puedes marcar UN número en el tarjetón.</p>
+              <p className="text-sm text-red-600 mt-0.5">Si marcas más de uno, tu voto queda nulo. Elige: el partido (100) o un candidato.</p>
+            </div>
+            <div className="flex items-center gap-3 mb-2">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Movimiento_de_Salvaci%C3%B3n_Nacional_2026.png"
+                alt="Salvación Nacional"
+                className="w-16 h-16 object-contain rounded-xl bg-white p-1 shadow-sm border border-amber-100"
+              />
+              <p className="text-sm text-amber-700">
+                Vota por <strong>Salvación Nacional</strong>. Puedes marcar solo el número del partido (100) o elegir uno de los candidatos de la lista abajo.
+              </p>
+            </div>
           </div>
-          <div className="flex items-center gap-3 mb-2">
-            <img
-              src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Movimiento_de_Salvaci%C3%B3n_Nacional_2026.png"
-              alt="Salvación Nacional"
-              className="w-16 h-16 object-contain rounded-xl bg-white p-1 shadow-sm border border-amber-100"
-            />
-            <p className="text-sm text-amber-700">
-              Vota por <strong>Salvación Nacional</strong>. Puedes marcar solo el número del partido (100) o elegir uno de los candidatos de la lista abajo.
-            </p>
-          </div>
-        </div>
+        </FadeIn>
 
         {/* Salvación Nacional */}
         <section>
-          <div className="flex items-center gap-2 mb-4">
-            <div className="w-1 h-6 bg-blue-600 rounded-full"></div>
-            <h2 className="text-lg font-bold text-gray-900">Movimiento Salvación Nacional</h2>
-          </div>
+          <FadeIn delay={0.15}>
+            <div className="flex items-center gap-2 mb-4">
+              <div className="w-1 h-6 bg-blue-600 rounded-full"></div>
+              <h2 className="text-lg font-bold text-gray-900">Movimiento Salvación Nacional</h2>
+            </div>
+            <TarjetonBox
+              partido="Salvación Nacional"
+              numero="100"
+              candidatos={["01", "02", "08", "18"]}
+              color="border-blue-200"
+              bg="bg-blue-50"
+            />
+          </FadeIn>
 
-          <TarjetonBox
-            partido="Salvación Nacional"
-            numero="100"
-            candidatos={["01", "02", "08", "18"]}
-            color="border-blue-200"
-            bg="bg-blue-50"
-          />
-
-          <div className="mt-4 space-y-3">
-            {salvacionCandidatos.map((c) => (
-              <CandidatoCard key={c.numero} {...c} color="bg-blue-600" />
-            ))}
+          <div className="mt-4">
+            <StaggerList>
+              {salvacionCandidatos.map((c) => (
+                <StaggerItem key={c.numero}>
+                  <div className="mb-3">
+                    <CandidatoCard {...c} color="bg-blue-600" />
+                  </div>
+                </StaggerItem>
+              ))}
+            </StaggerList>
           </div>
         </section>
 
         {/* Partido Verde */}
         <section>
-          <div className="flex items-center gap-2 mb-4">
-            <div className="w-1 h-6 bg-green-600 rounded-full"></div>
-            <h2 className="text-lg font-bold text-gray-900">Partido Verde</h2>
-          </div>
+          <FadeIn delay={0.2}>
+            <div className="flex items-center gap-2 mb-4">
+              <div className="w-1 h-6 bg-green-600 rounded-full"></div>
+              <h2 className="text-lg font-bold text-gray-900">Partido Verde</h2>
+            </div>
+            <TarjetonBox
+              partido="Partido Verde"
+              numero="100"
+              candidatos={[]}
+              color="border-green-200"
+              bg="bg-green-50"
+            />
+          </FadeIn>
 
-          <TarjetonBox
-            partido="Partido Verde"
-            numero="100"
-            candidatos={[]}
-            color="border-green-200"
-            bg="bg-green-50"
-          />
-
-          <div className="mt-4 space-y-3">
-            {verdeCandidatos.map((c) => (
-              <CandidatoCard key={c.numero} {...c} color="bg-green-600" />
-            ))}
+          <div className="mt-4">
+            <StaggerList>
+              {verdeCandidatos.map((c) => (
+                <StaggerItem key={c.numero}>
+                  <div className="mb-3">
+                    <CandidatoCard {...c} color="bg-green-600" />
+                  </div>
+                </StaggerItem>
+              ))}
+            </StaggerList>
           </div>
         </section>
 
         {/* Cómo votar */}
-        <section className="bg-white rounded-2xl shadow-md border border-gray-100 p-5">
-          <h3 className="font-bold text-gray-900 mb-3">📋 ¿Cómo votar?</h3>
-          <ol className="space-y-2 text-sm text-gray-700">
-            <li className="flex gap-2"><span className="font-bold text-blue-600 min-w-[20px]">1.</span> Presenta tu cédula en el puesto de votación.</li>
-            <li className="flex gap-2"><span className="font-bold text-blue-600 min-w-[20px]">2.</span> Recibirás tarjetones para Senado y Cámara por separado.</li>
-            <li className="flex gap-2"><span className="font-bold text-blue-600 min-w-[20px]">3.</span> En el tarjetón busca el partido y marca el número del candidato (o solo el partido).</li>
-            <li className="flex gap-2"><span className="font-bold text-blue-600 min-w-[20px]">4.</span> Introduce el tarjetón en el sobre y deposítalo en la urna.</li>
-          </ol>
-        </section>
+        <FadeIn delay={0.25}>
+          <div className="bg-white rounded-2xl shadow-md border border-gray-100 p-5">
+            <h3 className="font-bold text-gray-900 mb-3">📋 ¿Cómo votar?</h3>
+            <ol className="space-y-2 text-sm text-gray-700">
+              <li className="flex gap-2"><span className="font-bold text-blue-600 min-w-[20px]">1.</span> Presenta tu cédula en el puesto de votación.</li>
+              <li className="flex gap-2"><span className="font-bold text-blue-600 min-w-[20px]">2.</span> Recibirás tarjetones para Senado y Cámara por separado.</li>
+              <li className="flex gap-2"><span className="font-bold text-blue-600 min-w-[20px]">3.</span> En el tarjetón busca el partido y marca el número del candidato (o solo el partido).</li>
+              <li className="flex gap-2"><span className="font-bold text-blue-600 min-w-[20px]">4.</span> Introduce el tarjetón en el sobre y deposítalo en la urna.</li>
+            </ol>
+          </div>
+        </FadeIn>
 
         {/* Mensaje final */}
-        <div className="bg-gray-900 rounded-2xl p-5 text-center">
-          <p className="text-2xl mb-2">🗳️</p>
-          <p className="text-white font-bold text-base mb-1">Tu voto es tu voz</p>
-          <p className="text-gray-400 text-sm">
-            Votar es el acto más importante de la democracia. Cada voto cuenta para definir el futuro del país. No dejes pasar esta oportunidad.
-          </p>
-        </div>
+        <FadeIn delay={0.3}>
+          <Pulsebadge>
+            <div className="bg-gray-900 rounded-2xl p-5 text-center">
+              <p className="text-2xl mb-2">🗳️</p>
+              <p className="text-white font-bold text-base mb-1">Tu voto es tu voz</p>
+              <p className="text-gray-400 text-sm">
+                Votar es el acto más importante de la democracia. Cada voto cuenta para definir el futuro del país. No dejes pasar esta oportunidad.
+              </p>
+            </div>
+          </Pulsebadge>
+        </FadeIn>
 
-        <p className="text-center text-xs text-gray-400 pb-4">
+        <p className="text-center text-xs text-gray-400 pb-2">
           Información basada en listas oficiales · Elecciones Congreso Colombia 2026
         </p>
         <p className="text-center text-xs text-gray-400 pb-6">
