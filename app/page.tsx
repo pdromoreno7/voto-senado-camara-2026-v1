@@ -194,6 +194,10 @@ export default function Page() {
         {/* Nota importante */}
         <div className="bg-amber-50 border border-amber-200 rounded-2xl p-4">
           <p className="text-sm font-semibold text-amber-800 mb-2">💡 ¿No sabes exactamente por quién votar?</p>
+          <div className="bg-red-50 border border-red-200 rounded-xl p-3 mb-3">
+            <p className="text-sm font-bold text-red-700">⚠️ Solo puedes marcar UN número en el tarjetón.</p>
+            <p className="text-sm text-red-600 mt-0.5">Si marcas más de uno, tu voto queda nulo. Elige: el partido (100) o un candidato.</p>
+          </div>
           <div className="flex items-center gap-3 mb-2">
             <img
               src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Movimiento_de_Salvaci%C3%B3n_Nacional_2026.png"
