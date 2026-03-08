@@ -59,8 +59,9 @@ const salvacionCandidatos = [
     numero: "100",
     nombre: "Sara Castellanos",
     cargo: "Senado",
-    descripcion: "Voto de lista por el Movimiento de Salvación Nacional.",
+    descripcion: "Cristiana, defensora de los valores de la familia y la fe. Lucha por proteger a los niños contra la ideología de género en las aulas, defiende los derechos de los padres sobre la educación de sus hijos y propone reducir la carga tributaria para los colombianos.",
     region: "Nacional",
+    foto: "/sara-castellanos.jpg",
   },
 ];
 
@@ -81,6 +82,7 @@ function CandidatoCard({
   descripcion,
   region,
   color,
+  foto,
 }: {
   numero: string;
   nombre: string;
@@ -88,16 +90,26 @@ function CandidatoCard({
   descripcion: string;
   region: string;
   color: string;
+  foto?: string;
 }) {
   return (
     <div className="bg-white rounded-2xl shadow-md border border-gray-100 p-4 flex items-start gap-4">
-      <div
-        className={`min-w-[52px] h-[52px] rounded-xl flex items-center justify-center text-white font-bold text-lg ${color}`}
-      >
-        {numero}
-      </div>
+      {foto ? (
+        <img
+          src={foto}
+          alt={nombre}
+          className="min-w-[64px] w-16 h-16 rounded-xl object-cover object-top shadow-sm border border-gray-100"
+        />
+      ) : (
+        <div className={`min-w-[52px] h-[52px] rounded-xl flex items-center justify-center text-white font-bold text-lg ${color}`}>
+          {numero}
+        </div>
+      )}
       <div>
-        <p className="font-semibold text-gray-900 text-base leading-tight">{nombre}</p>
+        <div className="flex items-center gap-2">
+          <p className="font-semibold text-gray-900 text-base leading-tight">{nombre}</p>
+          <span className={`text-xs text-white font-bold px-2 py-0.5 rounded-full ${color}`}>#{numero}</span>
+        </div>
         <p className="text-xs text-gray-500 mt-0.5 mb-1">{cargo} · {region}</p>
         <p className="text-sm text-gray-600">{descripcion}</p>
       </div>
