@@ -113,6 +113,17 @@ const camaraCandidatos = [
   },
 ];
 
+const cambioRadicalCandidatos = [
+  {
+    numero: "2",
+    nombre: "Lorena Ríos",
+    cargo: "Senado",
+    descripcion: "Cristiana. Abogada especializada en Derecho Ambiental y magíster en Derecho Administrativo (Universidad del Rosario). Estudios en Derechos Humanos en la Universidad Birkbeck (Londres) y en Estrategias Globales para la Protección de la Niñez en Harvard. Asesora del Ministerio del Interior donde creó la Dirección de Asuntos Religiosos (8 años). Logró la primera Política Pública Nacional de Libertad Religiosa y estableció el 4 de julio como Día Nacional de la Libertad Religiosa y de Cultos.",
+    region: "Nacional",
+    foto: "/lorena-rios.jpg",
+  },
+];
+
 const verdeCandidatos = [
   {
     numero: "100",
@@ -291,6 +302,30 @@ export default function Page() {
             {salvacionCamaraCandidatos.map((c) => (
               <ScrollCard key={c.numero}>
                 <CandidatoCard {...c} color="bg-blue-600" />
+              </ScrollCard>
+            ))}
+          </div>
+        </section>
+
+        {/* Cambio Radical */}
+        <section>
+          <FadeIn delay={0.2}>
+            <div className="flex items-center gap-2 mb-4">
+              <div className="w-1 h-6 bg-orange-500 rounded-full"></div>
+              <h2 className="text-lg font-bold text-gray-900">Senado — Cambio Radical / Alma</h2>
+            </div>
+            <div className="rounded-2xl border-2 border-orange-200 bg-orange-50 p-4 mb-4">
+              <p className="text-xs font-semibold uppercase tracking-widest text-gray-500 mb-1">Así se vota</p>
+              <p className="font-bold text-gray-900 text-lg mb-3">Cambio Radical · Senado</p>
+              <span className="bg-white border border-gray-200 rounded-xl px-4 py-2 font-bold text-gray-800 text-base shadow-sm">
+                Candidato: <span className="text-orange-600">2</span>
+              </span>
+            </div>
+          </FadeIn>
+          <div className="space-y-3">
+            {cambioRadicalCandidatos.map((c) => (
+              <ScrollCard key={c.numero}>
+                <CandidatoCard {...c} color="bg-orange-500" />
               </ScrollCard>
             ))}
           </div>
