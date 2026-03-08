@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { FadeIn, StaggerList, StaggerItem, Pulsebadge } from "./components/AnimatedCard";
+import { FadeIn, StaggerList, StaggerItem, Pulsebadge, ScrollCard } from "./components/AnimatedCard";
 
 export const metadata: Metadata = {
   title: "¿Por quién votar? — Elecciones 2026",
@@ -94,10 +94,11 @@ const salvacionCandidatos = [
 const verdeCandidatos = [
   {
     numero: "100",
-    nombre: "JTP Hernández",
+    nombre: "Jota Pe Hernández",
     cargo: "Senado",
-    descripcion: "Candidato Partido Verde — voto de lista.",
-    region: "Nacional",
+    descripcion: "Youtuber, músico cristiano y senador desde 2022. Fue el 3er candidato más votado a nivel nacional. Defensor de la familia, crítico del gobierno Petro y de la ideología de género. Ha impulsado debates sobre libertad de expresión, educación y valores cristianos en el Congreso.",
+    region: "Bucaramanga · Nacional",
+    foto: "/jtp-hernandez.jpg",
   },
 ];
 
@@ -230,16 +231,12 @@ export default function Page() {
             />
           </FadeIn>
 
-          <div className="mt-4">
-            <StaggerList>
-              {salvacionCandidatos.map((c) => (
-                <StaggerItem key={c.numero}>
-                  <div className="mb-3">
-                    <CandidatoCard {...c} color="bg-blue-600" />
-                  </div>
-                </StaggerItem>
-              ))}
-            </StaggerList>
+          <div className="mt-4 space-y-3">
+            {salvacionCandidatos.map((c) => (
+              <ScrollCard key={c.numero}>
+                <CandidatoCard {...c} color="bg-blue-600" />
+              </ScrollCard>
+            ))}
           </div>
         </section>
 
@@ -259,16 +256,12 @@ export default function Page() {
             />
           </FadeIn>
 
-          <div className="mt-4">
-            <StaggerList>
-              {verdeCandidatos.map((c) => (
-                <StaggerItem key={c.numero}>
-                  <div className="mb-3">
-                    <CandidatoCard {...c} color="bg-green-600" />
-                  </div>
-                </StaggerItem>
-              ))}
-            </StaggerList>
+          <div className="mt-4 space-y-3">
+            {verdeCandidatos.map((c) => (
+              <ScrollCard key={c.numero}>
+                <CandidatoCard {...c} color="bg-green-600" />
+              </ScrollCard>
+            ))}
           </div>
         </section>
 

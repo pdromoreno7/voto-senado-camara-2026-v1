@@ -51,6 +51,19 @@ export function StaggerItem({ children }: { children: React.ReactNode }) {
   );
 }
 
+export function ScrollCard({ children }: { children: React.ReactNode }) {
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 40 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-50px" }}
+      transition={{ duration: 0.45, ease: "easeOut" }}
+    >
+      {children}
+    </motion.div>
+  );
+}
+
 export function Pulsebadge({ children, className = "" }: { children: React.ReactNode; className?: string }) {
   return (
     <motion.div
