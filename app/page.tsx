@@ -36,6 +36,7 @@ const salvacionCandidatos = [
     cargo: "Senado",
     descripcion: "Abogado y dirigente del Movimiento de Salvación Nacional. Recuperó la personería jurídica del partido y lideró su relanzamiento; fue candidato presidencial en 2022. Ha ejercido principalmente como vocero y cabeza visible del movimiento en los últimos años.",
     region: "Bogotá · Nacional",
+    foto: "/enrique-gomez.jpg",
   },
   {
     numero: "02",
