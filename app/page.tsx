@@ -74,6 +74,7 @@ const salvacionCandidatos = [
     cargo: "Senado",
     descripcion: "Politólogo, especialista en Democracia y Régimen Electoral, cofundador del movimiento FUERA. Ha trabajado en la Registraduría Nacional, el Concejo de Bogotá y el Congreso. Fue Secretario Privado de la Alcaldía de Mosquera. Defenderá el erario, la transparencia y la política sin corrupción.",
     region: "Reservas · Proyección Social",
+    foto: "/german-rodriguez.jpg",
   },
   {
     numero: "18",
