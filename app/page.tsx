@@ -194,6 +194,16 @@ export default function Page() {
 
       <div className="max-w-lg mx-auto px-4 py-6 space-y-8">
 
+        {/* Descripción */}
+        <FadeIn delay={0.05}>
+          <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-5">
+            <p className="text-sm text-gray-700 leading-relaxed italic">
+              Colombia está en un momento decisivo. Defendemos la familia, la fe, la libertad de expresión y la libre empresa. Creemos en un Estado más pequeño y ciudadanos más libres. Hoy más que nunca necesitamos hacer batalla cultural y defender lo que somos como nación — esta también es una guerra espiritual. Aquí encontrarás una guía de candidatos que comparten estos valores. Tu voto es tuyo — úsalo con conciencia y libertad. 🇨🇴
+            </p>
+            <p className="text-xs text-gray-400 mt-3 italic text-right">— Pedro Moreno</p>
+          </div>
+        </FadeIn>
+
         {/* Nota importante */}
         <FadeIn delay={0.1}>
           <div className="bg-amber-50 border border-amber-200 rounded-2xl p-4">
