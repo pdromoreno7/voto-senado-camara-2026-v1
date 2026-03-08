@@ -91,6 +91,17 @@ const salvacionCandidatos = [
   },
 ];
 
+const salvacionCamaraCandidatos = [
+  {
+    numero: "118",
+    nombre: "Johnatan Silva",
+    cargo: "Cámara",
+    descripcion: "Firme en la defensa de la niñez. Proteger la inocencia, fortalecer la familia y devolverle autoridad a los padres no es retroceder: es resistir con carácter. Defender a los niños no es un eslogan, es una línea roja. FIRMES POR LOS NIÑOS.",
+    region: "Bogotá",
+    foto: "/johnatan-silva.jpg",
+  },
+];
+
 const camaraCandidatos = [
   {
     numero: "101",
@@ -254,6 +265,30 @@ export default function Page() {
 
           <div className="mt-4 space-y-3">
             {salvacionCandidatos.map((c) => (
+              <ScrollCard key={c.numero}>
+                <CandidatoCard {...c} color="bg-blue-600" />
+              </ScrollCard>
+            ))}
+          </div>
+        </section>
+
+        {/* Cámara - Salvación Nacional */}
+        <section>
+          <FadeIn delay={0.2}>
+            <div className="flex items-center gap-2 mb-4">
+              <div className="w-1 h-6 bg-blue-600 rounded-full"></div>
+              <h2 className="text-lg font-bold text-gray-900">Cámara por Bogotá — Salvación Nacional</h2>
+            </div>
+            <div className="rounded-2xl border-2 border-blue-200 bg-blue-50 p-4 mb-4">
+              <p className="text-xs font-semibold uppercase tracking-widest text-gray-500 mb-1">Así se vota</p>
+              <p className="font-bold text-gray-900 text-lg mb-3">Salvación Nacional · Cámara Bogotá</p>
+              <span className="bg-white border border-gray-200 rounded-xl px-4 py-2 font-bold text-gray-800 text-base shadow-sm">
+                Candidato: <span className="text-blue-600">118</span>
+              </span>
+            </div>
+          </FadeIn>
+          <div className="space-y-3">
+            {salvacionCamaraCandidatos.map((c) => (
               <ScrollCard key={c.numero}>
                 <CandidatoCard {...c} color="bg-blue-600" />
               </ScrollCard>
