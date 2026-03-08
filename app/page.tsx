@@ -7,6 +7,14 @@ export const metadata: Metadata = {
 
 const salvacionCandidatos = [
   {
+    numero: "100",
+    nombre: "Sara Castellanos",
+    cargo: "Senado",
+    descripcion: "Cristiana, defensora de los valores de la familia y la fe. Lucha por proteger a los niños contra la ideología de género en las aulas, defiende los derechos de los padres sobre la educación de sus hijos y propone reducir la carga tributaria para los colombianos.",
+    region: "Nacional",
+    foto: "/sara-castellanos.jpg",
+  },
+  {
     numero: "01",
     nombre: "Enrique Gómez Martínez",
     cargo: "Senado",
@@ -52,16 +60,15 @@ const salvacionCandidatos = [
     numero: "18",
     nombre: "José Ángel Espinoza Henao",
     cargo: "Senado",
-    descripcion: "Candidato al Senado por el Movimiento de Salvación Nacional.",
+    descripcion: "Militar retirado que ganó notoriedad pública al presentar una demanda ante la Corte Constitucional relacionada con la despenalización del aborto. Su influencia se articula por presencia mediática y debates nacionales jurídicos y de valores.",
     region: "Nacional",
   },
   {
-    numero: "100",
-    nombre: "Sara Castellanos",
+    numero: "20",
+    nombre: "Wilson Ruiz Orejuela",
     cargo: "Senado",
-    descripcion: "Cristiana, defensora de los valores de la familia y la fe. Lucha por proteger a los niños contra la ideología de género en las aulas, defiende los derechos de los padres sobre la educación de sus hijos y propone reducir la carga tributaria para los colombianos.",
-    region: "Nacional",
-    foto: "/sara-castellanos.jpg",
+    descripcion: "Abogado y jurista. Fue Ministro de Justicia y del Derecho (2020–2022) y magistrado y presidente del Consejo Superior de la Judicatura. Formación en Derecho (Universidad Libre, Cali) con posgrado y doctorado en Derecho.",
+    region: "Valle del Cauca · Cali · Nacional",
   },
 ];
 
