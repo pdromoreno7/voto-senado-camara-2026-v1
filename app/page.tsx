@@ -125,10 +125,17 @@ export default function Page() {
 
         {/* Nota importante */}
         <div className="bg-amber-50 border border-amber-200 rounded-2xl p-4">
-          <p className="text-sm font-semibold text-amber-800 mb-1">💡 ¿No sabes exactamente por quién votar?</p>
-          <p className="text-sm text-amber-700">
-            Vota por <strong>Salvación Nacional</strong>. Puedes marcar solo el número del partido (100) o elegir uno de los candidatos de la lista abajo.
-          </p>
+          <p className="text-sm font-semibold text-amber-800 mb-2">💡 ¿No sabes exactamente por quién votar?</p>
+          <div className="flex items-center gap-3 mb-2">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Movimiento_de_Salvaci%C3%B3n_Nacional_2026.png"
+              alt="Salvación Nacional"
+              className="w-16 h-16 object-contain rounded-xl bg-white p-1 shadow-sm border border-amber-100"
+            />
+            <p className="text-sm text-amber-700">
+              Vota por <strong>Salvación Nacional</strong>. Puedes marcar solo el número del partido (100) o elegir uno de los candidatos de la lista abajo.
+            </p>
+          </div>
         </div>
 
         {/* Salvación Nacional */}
