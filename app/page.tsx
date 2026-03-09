@@ -39,20 +39,7 @@ const salvacionCandidatos = [
     region: "Bogotá · Nacional",
     foto: "/enrique-gomez.jpg",
   },
-  {
-    numero: "02",
-    nombre: "Carlos Felipe Mejía Mejía",
-    cargo: "Senado",
-    descripcion: "Agrónomo (Zamorano) con maestría en Gobierno y Gestión Pública. Fue senador (2014–2018) por el Centro Democrático, enfocado en el sector agropecuario y debates de control político. También fue diputado en Caldas.",
-    region: "Caldas",
-  },
-  {
-    numero: "07",
-    nombre: "Ramón Elías López Sabogal",
-    cargo: "Senado",
-    descripcion: "Abogado (Universidad Libre) y empresario vallecaucano. Fue senador por Cambio Radical (2006–2010), con participación en actividad legislativa y experiencia empresarial en distintos sectores.",
-    region: "Valle del Cauca · Palmira",
-  },
+
   {
     numero: "08",
     nombre: "John Alejandro Bermeo Rodríguez",
@@ -61,13 +48,7 @@ const salvacionCandidatos = [
     region: "Nacional",
     foto: "/john-bermeo.jpg",
   },
-  {
-    numero: "09",
-    nombre: "Carlos Alberto Cuartas Quiceno",
-    cargo: "Senado",
-    descripcion: "Administrador de negocios y empresario. Fue fórmula vicepresidencial de Enrique Gómez en 2022 y lidera el movimiento ciudadano \"Votemos\". Ha trabajado en tecnología e infraestructura y fue secretario privado de la Aeronáutica Civil (2000–2002).",
-    region: "Antioquia · Medellín",
-  },
+
   {
     numero: "10",
     nombre: "Germán Andrés Rodríguez Prieto",
@@ -76,13 +57,7 @@ const salvacionCandidatos = [
     region: "Reservas · Proyección Social",
     foto: "/german-rodriguez.jpg",
   },
-  {
-    numero: "18",
-    nombre: "José Ángel Espinoza Henao",
-    cargo: "Senado",
-    descripcion: "Militar retirado que ganó notoriedad pública al presentar una demanda ante la Corte Constitucional relacionada con la despenalización del aborto. Su influencia se articula por presencia mediática y debates nacionales jurídicos y de valores.",
-    region: "Nacional",
-  },
+
   {
     numero: "20",
     nombre: "Wilson Ruiz Orejuela",
