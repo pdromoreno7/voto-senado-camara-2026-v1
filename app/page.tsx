@@ -22,6 +22,9 @@ export const metadata: Metadata = {
   },
 };
 
+const ganadoresNombres = ["Sara Castellanos", "Enrique Gómez Martínez", "John Alejandro Bermeo Rodríguez", "Germán Andrés Rodríguez Prieto", "Wilson Ruiz Orejuela", "Johnatan Silva", "Jota Pe Hernández", "Daniel Briceño"];
+const noGanaron = ["Lorena Ríos", "Wilson Ruiz Orejuela"];
+
 const salvacionCandidatos = [
   {
     numero: "100",
@@ -128,8 +131,14 @@ function CandidatoCard({
   color: string;
   foto?: string;
 }) {
+  const gano = !noGanaron.includes(nombre);
   return (
-    <div className="bg-white rounded-2xl shadow-md border border-gray-100 p-4 flex items-start gap-4 hover:shadow-lg transition-shadow duration-300">
+    <div className="bg-white rounded-2xl shadow-md border border-gray-100 p-4 flex items-start gap-4 hover:shadow-lg transition-shadow duration-300 relative">
+      {gano && (
+        <span className="absolute -top-2 -left-2 bg-green-600 text-white text-xs font-bold px-2 py-1 rounded-full shadow-md z-10">
+          ✓ GANADOR
+        </span>
+      )}
       {foto ? (
         <img
           src={foto}
