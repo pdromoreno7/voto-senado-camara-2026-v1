@@ -135,7 +135,7 @@ function CandidatoCard({
   return (
     <div className="bg-white rounded-2xl shadow-md border border-gray-100 p-4 flex items-start gap-4 hover:shadow-lg transition-shadow duration-300 relative">
       {gano && (
-        <span className="absolute -top-2 -left-2 bg-green-600 text-white text-xs font-bold px-2 py-1 rounded-full shadow-md z-10">
+        <span className="absolute -bottom-2 -right-2 bg-green-600 text-white text-xs font-bold px-3 py-1.5 rounded-full shadow-md z-10">
           ✓ GANADOR
         </span>
       )}
